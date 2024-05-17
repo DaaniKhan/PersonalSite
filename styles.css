@@ -1,0 +1,13 @@
+.serif-font{
+    font-family: "Cambria", serif;
+}
+
+.san-serif-font{
+    font-family: 'Touvlo Sans Serif', sans-serif;
+}
+
+.icon-square {
+    width: 3rem;
+    height: 3rem;
+    border-radius: .75rem;
+}
