@@ -1,79 +1,145 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>My Resume</title>
-
-    <link rel="stylesheet" href="styles.css">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daanish Uddin Khan - Resume</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      padding: 2rem;
+      background-color: #fff;
+    }
+    h2 {
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 0.25rem;
+      margin-top: 2rem;
+    }
+    .section {
+      margin-top: 2rem;
+    }
+    .contact a {
+      color: #0d6efd;
+      text-decoration: none;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .resume-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+    .no-indent li {
+      margin-bottom: 0.5rem;
+    }
+  </style>
 </head>
-
 <body>
-    <h1>MY RESUME</h1>
-    <img src="Daanish Khan.jpg" height="100" alt="Picture of me">
-    <hr/>
-    
-    <h2>EDUCATION</h2>
-    <p>Lahore University of Management Sciences, LUMS</p>
-    <p>B.S in Computer Science, 3rd year student</p>
-    <p>Expected graduation in May 2025</p>
-    <hr/>
 
-    <h2>SUMMARY</h2>
-    <p>•	Experience in Manual and Automated testing for Software Quality Assurance (SQA).</p>   
-    <p>•	Experience with modern SDLC tools - Git, JIRA, Selenium, Artifactory, Zephyr, Confluence & OpenShift.</p>    
-    <p>•	Understanding of agile methodology as followed in current industry.</p>
-    <p>•	Strong exposure on designing test cases and defect life cycle process with basic knowledge of SQL.</p>
-    <p>•	Expertise in initiating, executing, monitoring & closing projects and tickets following agile and waterfall.</p>
-    <p>•	Thorough knowledge on latest practices like Agile scrum, SDLC, Test driven, behavior driven development approaches.</p>
-    <p>•	Expertise in preparing detailed, comprehensive and well-structured test plans and test cases.</p>
-    <p>•	Skilled in problem solving, conflict resolution, collaboration, and able to help encourage teamwork among individuals.</p>    
+  <div class="text-center mb-4">
+    <h1 class="fw-bold">Daanish Uddin Khan</h1>
+    <div class="contact">
+      <a href="mailto:daanishuddin@gmail.com">daanishuddin@gmail.com</a> |
+      <a href="https://www.linkedin.com/in/daanish-khan-" target="_blank">LinkedIn</a> |
+      <a href="https://github.com/DaaniKhan" target="_blank">GitHub</a> |
+      +92 322-4661550
+    </div>
+  </div>
 
-    <hr/>
+  <h2>Education</h2>
+  <p><strong>BS Computer Science | Lahore University of Management Sciences</strong> <span class="float-end"><em>Sep 2021 -- May 2025</em></span><br>
+  <em>Relevant Coursework:</em> Introduction to AI, Data Structures, Network-Centric Computing, Machine Learning, Operating Systems, Algorithms, Data Science, Software Engineering, Cloud Development, Advanced Topics in Machine Learning</p>
 
-    <h2>PROJECTS</h2>
-    <h3>Security Website: Provides Endpoint Security Through the Wazuh. Service (Feb 2024 – April 2024)</h3>
-    <p>•	Created an abstraction through our website developed through React native, to provide easier access to the Wazuh. Security stack.</p>
-    <p>•	Worked in a team environment with close collaboration and communication between all members to ensure a smooth development process with all five team members working on a different part of development.</p>
-    <p>•	Used an agile approach that focused on customer involvement, adaptable planning, continuous evaluation, and risk management.</p>
-    <p>•	Generated various reports and presentations for our supervisor at weekly sync ups to maintain Quality Assurance standard.</p>
-    <p>•	Performed several user testing practices to ensure a bug free and smooth application.</p>
+  <h2>Work Experience</h2>
 
-    <h3>Chatter-Pi: Making IOT sensor data in agriculture accessible to local farmers (Feb 2024 – Present)</h3>
-    <p>•	Creation of a system which uses IOT sensor data, local context and weather forecasts to provide actionable insights to farmers in their local language.</p>
-    <p>•	A farmer interacts with the system through a chat bot, using a chat app, such as Telegram or WhatsApp.</p>
-    <p>•	An LLM, currently GPT-3.5, is then fed the data, local context and weather forecasts and through careful prompt engineering, a short actionable insight is provided to the farmer in the form of a message in their local language.</p>
-    <p>•	Closely collaborated in a team environment to ensure an in-sync development process.</p>
-    <p>•	Weekly progress update meetings and reports for our supervisor, working to deliver an ever-evolving final product.</p>
+  <p class="resume-title">Research Assistant | SysNet Lab | LUMS <a href="https://github.com/Saad4858/Pandas" target="_blank">(link)</a> <span class="float-end"><em>Jan 2024 -- May 2025</em></span></p>
+  <ul class="no-indent">
+    <li>Secured PKR 50,000 grant to research LLM-IoT systems; developed multilingual WhatsApp chatbot for farmers.</li>
+    <li>Built RAG pipeline fusing sensor data, weather, prices and policy docs to generate localized recommendations.</li>
+    <li>Deployed system in farms near Lahore, led user studies and co-authored research paper for ACM UbiComp 2025.</li>
+  </ul>
 
-    <hr/>
+  <p class="resume-title">Teaching Assistant | LUMS <span class="float-end"><em>Sep 2024 -- May 2025</em></span></p>
+  <ul class="no-indent">
+    <li><strong>CS-360 Software Engineering:</strong> Guided 4 teams through full SDLC; supported 233 students.</li>
+    <li><strong>CS-677 Internet of Things:</strong> Designed and graded 4 hands‑on labs; mentored graduate projects.</li>
+    <li><strong>CS-535 Machine Learning:</strong> Evaluated assignments and advised 135 students on half‑semester ML projects.</li>
+  </ul>
 
-    <h2>SKILLS</h2>
-    <p>•	Proficiency in Microsoft Office Apps</p>
-    <p>•	Regression Testing</p>
-    <p>•	Performance & Unit Testing</p>
-    <p>•	Efficient in SQA Testing Tools</p>
-    <p>•	Leadership</p>
-    <p>•	Issue Identification</p>
-    <p>•	Critical Thinking</p>
-    <p>•	End To End Testing</p>
-    <p>•	Quality Engineering</p>
-    <p>•	Documentation</p>
-    <p>•	Technical Analysis</p>
-    <p>•	API Testing</p>
+  <p class="resume-title">Intern | Cloud App Development Department | Systems Limited <span class="float-end"><em>June 2024 -- Aug 2024</em></span></p>
+  <ul class="no-indent">
+    <li>Built reusable React/TypeScript components, teamed with QA for testing, preventing regressions.</li>
+    <li>Supported UI improvements through code clean-up and minor front-end refinements.</li>
+    <li>Gained hands-on Agile experience through daily stand-ups and sprint planning.</li>
+  </ul>
 
+  <p class="resume-title">Research Intern | CSALT Lab | LUMS <span class="float-end"><em>Sep 2023 -- May 2024</em></span></p>
+  <ul class="no-indent">
+    <li>Annotated SQuAD2.0 via EATS data to build a novel Urdu QA dataset, published in <em>LREC-COLING 2024</em>.</li>
+    <li>Evaluated translation quality and assessed LLM fact-checking using Google Fact Check Explorer.</li>
+    <li>Ran LLM inference and factual consistency checks, contributing to a <em>Science</em> journal submission.</li>
+  </ul>
 
-    <section class="bg-dark">
-        <div class="container">
-          <footer class="py-3 my-4">
-            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-              <li class="nav-item"><a href="index.html" class="nav-link px-2 text-white">Home</a></li>
-              <li class="nav-item"><a href="mailto:daanishuddin@gmail.com" class="nav-link px-2 text-white">Contact Me</a></li>
-            </ul>
-            <p class="text-center text-white">© 2024 Daanish Uddin Khan</p>
-          </footer>
-        </div>
-    </section>
-    
+  <h2>Projects</h2>
+
+  <p class="resume-title">Scribbly: Personal and Social Book Management Platform <a href="https://github.com/DaaniKhan/Scribbly" target="_blank">(link)</a> <span class="float-end"><em>June 2025</em></span></p>
+  <ul class="no-indent">
+    <li>Built a MERN app to review, rate and explore books via OpenLibrary API and smart search features.</li>
+    <li>Developed secure JWT auth and a responsive animated UI using React + TypeScript.</li>
+  </ul>
+
+  <p class="resume-title">F1 Visualiser: Formula 1 Telemetry & Session Data Analytics <a href="https://github.com/DaaniKhan/F1-Visualise" target="_blank">(link)</a> <span class="float-end"><em>June 2025</em></span></p>
+  <ul class="no-indent">
+    <li>Engineered EJS/Node.js web app using OpenF1 API to analyze races, laps, pit stops, and qualifying sessions.</li>
+    <li>Visualized lap-by-lap leaderboards, sector times, compound usage, and stint/pit analytics.</li>
+  </ul>
+
+  <p class="resume-title">Adaptive Entropy Guided Universal Domain Adaptation <a href="https://github.com/SaadH-077/Adaptive-Entropy-Guided-Universal-Domain-Adaptation_AEG-UDA-" target="_blank">(link)</a> <span class="float-end"><em>Sep 2024 -- Dec 2024</em></span></p>
+  <ul class="no-indent">
+    <li>Designed entropy-guided pseudo-labeling with adaptive thresholds and rejection loss to filter noisy samples.</li>
+    <li>Reduced inference time by 0.2% (Closed DA) and 1.9% (Partial DA) over SOTA baselines.</li>
+  </ul>
+
+  <p class="resume-title">Real-Time Environmental Data Aggregation and Analysis Platform <span class="float-end"><em>Sep 2024 -- Dec 2024</em></span></p>
+  <ul class="no-indent">
+    <li>Built AWS Lambda, DynamoDB and S3 pipelines for real-time data; did load testing to handle 10k req/hr.</li>
+    <li>Deployed auto-scaling EC2 clusters with multi-AZ failover and CloudWatch alerts to ensure 99.9% uptime.</li>
+  </ul>
+
+  <p class="resume-title">Endpoint Security Integration via Wazuh on MERN Stack <span class="float-end"><em>Jan 2024 -- May 2024</em></span></p>
+  <ul class="no-indent">
+    <li>Integrated Wazuh into a MERN stack app for real-time threat detection, visualization and alerting.</li>
+    <li>Trained an ML model on Wazuh alerts to predict threats and validated with E2E testing and live demos.</li>
+  </ul>
+
+  <p class="resume-title">ML Pipeline for Toxic Comment Detection <span class="float-end"><em>Oct 2023 -- Dec 2023</em></span></p>
+  <ul class="no-indent">
+    <li>Built multi-label classifiers (LogReg, LSTM, BERT) using TF-IDF, sequences, and contextual embeddings.</li>
+    <li>Assessed performance with precision, recall, F1-score, and confusion matrix visualizations.</li>
+  </ul>
+
+  <h2>Skills & Certifications</h2>
+  <ul class="no-indent">
+    <li><strong>Introducing Generative AI with AWS</strong> <a href="https://www.udacity.com/certificate/e/d6803654-4352-11f0-a539-c7d655504e1b" target="_blank">(link)</a> <em>Udacity + Accenture</em></li>
+    <li><strong>AWS Educate: Machine Learning Foundations</strong> <a href="https://www.credly.com/badges/24942afe-0e76-4b21-84d6-7d323b9f9d2c/public_url" target="_blank">(link)</a> <em>Amazon Web Services</em></li>
+    <li><strong>Languages/Frameworks:</strong> C++, C, JavaScript, TypeScript, Python, React, Node.js, Express.js, EJS, CSS</li>
+    <li><strong>Cloud & Data:</strong> AWS, SQL, PostgreSQL, MongoDB, Pandas, NumPy</li>
+    <li><strong>Machine Learning:</strong> PyTorch, TensorFlow, Keras, LLMs, NLP, Deep Learning, Gen AI</li>
+    <li><strong>Soft Skills:</strong> Communication; Collaboration; Adaptability; Problem Solving; Leadership; Time Management</li>
+  </ul>
+
+  <section class="bg-light">
+    <div class="container">
+      <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item"><a href="index.html" class="nav-link px-2 text-black">Home</a></li>
+          <li class="nav-item"><a href="mailto:daanishuddin@gmail.com" class="nav-link px-2 text-black">Contact Me</a></li>
+        </ul>
+        <p class="text-center text-black">© 2025 Daanish Uddin Khan</p>
+      </footer>
+    </div>
+  </section>
+
 </body>
+</html>

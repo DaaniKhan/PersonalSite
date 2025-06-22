@@ -11,6 +11,8 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
     
     <style>
 
@@ -20,91 +22,179 @@
 
 <body>
     <section>
-      <div class="bg-dark text-secondary px-4 py-5 text-center">
-        
-          <div class="py-2">
-            <div class="container px-5">
-              <img src="Daanish Khan.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Daanish" width="250" height="50" loading="lazy">
-            </div>
-            <h1 class="display-5 fw-bold text-white serif-font">Hi! I'm Daanish.</h1>
-            <div class="col-lg-6 mx-auto">
-              <p class="fs-5 mb-4">I'm a third year college student researching on IOT and ML. I am also a web developer. Football has my heart and I like to write also.</p>
-              <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                <a href="./resume.html"><button type="button" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">My Resume</button></a>
+      <div class="bg-dark text-secondary text-center py-3 px-2">
+        <div class="container">
+          <img src="Daanish Khan.jpg" class="img-fluid border rounded-2 shadow mb-2" alt="Daanish" width="180" loading="lazy">
+          <h1 class="fs-2 fw-bold text-white serif-font mb-2">I'm Daanish, Welcome!</h1>
+          <p class="fs-5 mb-2">Computer Science graduate from LUMS working in machine learning and full-stack web development. Building impactful systems which bridge research and real-world application.</p>
+          <p>
+            <a href="mailto:daanishuddin@gmail.com" class="btn btn-info btn-lg px-3 me-sm-2 fw-bold">Contact Me</a>
+            <a href="./resume.html" class="btn btn-outline-info btn-lg px-3 me-sm-2 fw-bold">My Resume</a>
+          </p>
+          
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-light py-4 border-bottom">
+      <div class="container text-center">
+        <h2 class="fw-bold serif-font mb-3 text-dark text-center">What You'll Find Below</h2>
+        <p class="fs-5 text-secondary san-serif-font mb-1">
+          <a href="#research-projects" class="text-decoration-underline fw-semibold text-primary">
+            <strong>Research Work</strong>
+          </a>
+        </p>
+        <p class="fs-5 text-secondary san-serif-font mb-1">
+          <a href="#projects" class="text-decoration-underline fw-semibold text-primary">
+            <strong>Projects</strong>
+          </a>
+        </p>
+        <p class="fs-5 text-secondary san-serif-font">
+          <a href="#certifications" class="text-decoration-underline fw-semibold text-primary">
+            <strong>Certifications</strong>
+          </a>
+        </p>
+      </div>
+    </section>
+
+
+    <section id="research-projects" class="bg-white py-5">
+      <div class="container px-3">
+        <h2 class="pb-3 border-bottom serif-font text-center">Research Work</h2>
+        <div class="row row-cols-1 row-cols-lg-2 g-4">
+
+          <!-- KissanDost Card -->
+          <div class="col">
+            <div class="card h-100 shadow-sm border-info border-2">
+              <div class="card-body">
+                <h5 class="card-title text-info">KissanDost</h5>
+                <p class="card-text">
+                  An IoT + LLM-based multilingual advisory system that empowers low-literate farmers to access real-time agricultural insights via WhatsApp.
+                </p>
+                <div class="d-flex flex-wrap gap-2">
+                  <a href="https://github.com/Saad4858/Pandas" class="btn btn-outline-primary btn-sm fw-bold">Main Server</a>
+                  <a href="https://github.com/DaaniKhan/Agri-Chat" class="btn btn-outline-primary btn-sm fw-bold">Daily Updates</a>
+                  <a href="https://github.com/DaaniKhan/Agri-Dash" class="btn btn-outline-primary btn-sm fw-bold">Farmer Dashboard</a>
+                </div>
               </div>
             </div>
           </div>
-      </div>
-    </section>
 
-    <section class="py-5 text-center container">
-      <div class="row py-lg-5">
-        <div class="col-lg-6 col-md-8 mx-auto">
-          <h1 class="fw-light serif-font">Welcome!</h1>
-          <p class="lead text-body-secondary san-serif-font">Explore to your hearts desire.</p>
-          <p>
-            <a href="mailto:daanishuddin@gmail.com" class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold">Contact Me</a>
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container px-4 py-5" id="hanging-icons">
-        
-        <h2 class="pb-2 border-bottom serif-font">Projects</h2>
-        
-        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-          
-          <div class="col d-flex align-items-start">
-            <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-              <img src="ds.png" alt="Data Science Logo" height="40">
-            </div>
-            <div>
-              <h3 class="fs-2 text-body-emphasis san-serif-font">Daraz Analysis</h3>
-              <p class="san-serif-font">Conducted a thorough analysis by scraping the daraz website and answered key research questions in this published medium article.</p>
-              <a href="https://medium.com/@25100004/daraz-unveiled-deep-diving-into-e-commerce-55a9fcba725b" class="btn btn-primary">
-                Article
-              </a>
-            </div>
-          </div>
-
-          <div class="col d-flex align-items-start">
-            <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-              <img src="iot.png" alt="IOT Logo" height="40">
-            </div>
-            <div>
-              <h3 class="fs-2 text-body-emphasis san-serif-font">Chatter-Pi</h3>
-              <p class="san-serif-font">Chatter-Pi is a ever evolving work in progress. It aims to make IOT sensor data accessible to farmers in third world countries, such as Pakistan, through the use of LLMs.</p>
-              <a href="#" class="btn btn-primary">
-                Primary button
-              </a>
-            </div>
-          </div>
-
-          <div class="col d-flex align-items-start">
-            <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-              <img src="wd.png" alt="Web Dev Logo" height="40">
-            </div>
-            <div>
-              <h3 class="fs-2 text-body-emphasis san-serif-font">Wazuh. Security</h3>
-              <p class="san-serif-font">Wazuh. provides security through endpoint agents. The main obstacle in using Wazuh is its accessibility, through our website and service we were successful in increasing its accessibility.</p>
-              <a href="#" class="btn btn-primary">
-                Primary button
-              </a>
+          <!-- UQA Card -->
+          <div class="col">
+            <div class="card h-100 shadow-sm border-info border-2">
+              <div class="card-body">
+                <h5 class="card-title text-info">UQA: Urdu QA Dataset (Contributor)</h5>
+                <p class="card-text">
+                  Contributor to <strong>UQA</strong>, a benchmark Urdu QA dataset based on SQuAD2.0, published in LREC-COLING 2024.
+                </p>
+                <a href="https://aclanthology.org/2024.lrec-main.1497/" target="_blank" class="btn btn-outline-primary btn-sm fw-bold">Read Publication</a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
     </section>
-    
-    <section class="py-5 text-center container">
-      <div class="row py-lg-5">
-        <div class="col-lg-6 col-md-8 mx-auto">
-          <h1 class="fw-light serif-font border-bottom">About Me</h1>
-          <p class="lead text-body-secondary san-serif-font">I enjoy programming and especially writing code from scratch. Coding interests me most when I have a complete grasp over what I am working on / pursuing because then I am able to dedicate 100% of myself to the work.</p>
-          <p class="lead text-body-secondary san-serif-font">I love watching football, F1, mma and boxing. Sports in general are great to watch.  </p>
+
+    <section id="projects" class="bg-light py-5">
+      <div class="container px-3">
+        <h2 class="pb-3 border-bottom serif-font text-center">Projects</h2>
+        <div class="row row-cols-1 row-cols-lg-2 g-4">
+
+          <!-- Scribbly -->
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title text-info">Scribbly – Social Book Companion</h5>
+                <p class="card-text">
+                  A full-stack platform to review and manage books with personal libraries, public reviews, JWT auth, and OpenLibrary API integration in a clean, animated UI.
+                </p>
+                <a href="https://github.com/DaaniKhan/Scribbly" class="btn btn-outline-primary btn-sm fw-bold">View</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- F1 Visualiser -->
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title text-info">F1 Visualiser – OpenF1 Session Explorer</h5>
+                <p class="card-text">
+                  Interactive visualizer using OpenF1 API to explore lap leaderboards, pit stops, qualifying segments, and race strategies.
+                </p>
+                <a href="https://github.com/DaaniKhan/F1-Visualise" class="btn btn-outline-primary btn-sm fw-bold">View</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- AEG-UDA -->
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title text-info">AEG-UDA – Adaptive Entropy-Guided UDA</h5>
+                <p class="card-text">
+                  Framework integrating dynamic thresholds, entropy-guided pseudo-labeling, and rejection loss for robust universal domain adaptation.
+                </p>
+                <a href="https://github.com/SaadH-077/Adaptive-Entropy-Guided-Universal-Domain-Adaptation_AEG-UDA-" class="btn btn-outline-primary btn-sm fw-bold">View</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Federated Learning -->
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title text-info">Federated Learning Optimization – Comparison</h5>
+                <p class="card-text">
+                  Comparative analysis of six FL algorithms on non-IID MNIST splits. Highlights SCAFFOLD and FedSAM for client drift mitigation and generalization.
+                </p>
+                <a href="https://github.com/SaadH-077/Federated-Learning-Optimization" class="btn btn-outline-primary btn-sm fw-bold">View</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Daraz Analysis -->
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title text-info">Daraz E-Commerce Analysis</h5>
+                <p class="card-text">
+                  ML + causal inference analysis on storefront attributes affecting product ratings using Random Forest & XGBoost.
+                </p>
+                <a href="https://medium.com/@25100004/daraz-unveiled-deep-diving-into-e-commerce-55a9fcba725b" class="btn btn-outline-primary btn-sm fw-bold">Read Article</a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="bg-white py-5">
+      <div class="container px-3">
+        <h2 class="pb-3 border-bottom serif-font text-center">Certifications</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+          <!-- Gen AI Cert -->
+          <div class="col">
+            <div class="card h-100 border-success shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title text-success">Introducing Generative AI with AWS</h5>
+                <p class="card-text">Completed Udacity’s Generative AI course with AWS & Accenture, covering GenAI workflows and responsible AI practices.</p>
+                <a href="https://www.udacity.com/certificate/e/d6803654-4352-11f0-a539-c7d655504e1b" class="btn btn-outline-primary btn-sm fw-bold">View Certificate</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- AWS Educate -->
+          <div class="col">
+            <div class="card h-100 border-success shadow-sm d-flex flex-row align-items-center">
+              <img src="aws-educate-machine-learning-foundations.png" alt="AWS Educate Badge" width="80" class="p-3">
+              <div class="card-body">
+                <h5 class="card-title text-success">AWS Educate: ML Foundations</h5>
+                <p class="card-text">Demonstrated strong understanding of ML concepts and practical application of the ML pipeline.</p>
+                <a href="https://www.credly.com/badges/24942afe-0e76-4b21-84d6-7d323b9f9d2c/public_url" class="btn btn-outline-primary btn-sm fw-bold">View</a>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
