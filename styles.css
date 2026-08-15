@@ -1,13 +1,514 @@
-.serif-font{
-    font-family: "Cambria", serif;
+/* ==========================================================================
+   Daanish Uddin Khan — Personal Site
+   Design system: "papers on a desk" — a warm stone/oat canvas holding
+   flat paper-toned panels, an amber (chemistry) + pine (agri-IoT) accent
+   pair, a serif for reading + a mono utility face for the researcher's
+   own vocabulary (dates, venues, status). No component framework: plain
+   semantic HTML + hand-written CSS, so nothing here fights a library's
+   default specificity.
+   ========================================================================== */
+
+/* ---- Design tokens ------------------------------------------------------ */
+:root {
+  /* colour: warm stone canvas + paper panels, amber + pine accents.
+     Deliberately NOT the pale-cream + terracotta pairing that reads as
+     the default "AI portfolio" palette — hue-shifted warmer/deeper on
+     the base, and the accent sits in the yellow-gold family rather than
+     orange-red, paired with a cool pine green for contrast. */
+  --canvas: #E7DFCC;       /* page background — "the desk" */
+  --paper: #FBF7EF;        /* content panels — "the page" */
+  --paper-soft: #F3EDDC;   /* recessed panel tone (projects section) */
+  --ink: #2B2418;          /* primary text */
+  --ink-soft: #6B6152;     /* secondary / muted text */
+  --line: #D9CEB1;         /* hairline borders and rules */
+  --line-soft: #E3D9BC;
+
+  --amber: #7A5012;        /* primary accent — links, primary action (WCAG AA on both canvas and paper) */
+  --amber-deep: #5C3D0E;   /* hover / pressed state for amber */
+  --pine: #3E5C46;         /* secondary accent — agri/IoT thread */
+  --pine-deep: #2E4634;
+
+  --espresso: #241B12;     /* dark band — footer only */
+  --espresso-line: #4A3B28;
+  --paper-on-dark: #EFE6D2;
+
+  /* type */
+  --font-display: "Newsreader", "Iowan Old Style", "Palatino Linotype", serif;
+  --font-body: "Public Sans", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  /* spacing scale */
+  --sp-1: 0.5rem;
+  --sp-2: 1rem;
+  --sp-3: 1.5rem;
+  --sp-4: 2.25rem;
+  --sp-5: 3.5rem;
+  --sp-6: 5rem;
+  --sp-7: 7rem;
+
+  --radius: 10px;
+  --content-width: 880px;
 }
 
-.san-serif-font{
-    font-family: 'Touvlo Sans Serif', sans-serif;
+/* ---- Reset --------------------------------------------------------------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
 }
 
-.icon-square {
-    width: 3rem;
-    height: 3rem;
-    border-radius: .75rem;
+img { max-width: 100%; display: block; }
+
+a {
+  color: var(--amber);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+a:hover { color: var(--amber-deep); }
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0;
+  line-height: 1.2;
+}
+
+p { margin: 0; }
+
+ul { margin: 0; padding: 0; list-style: none; }
+
+/* Visible keyboard focus everywhere — no invisible-focus buttons/links */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--pine);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
+
+/* ---- Shared layout helpers ------------------------------------------------ */
+.wrap {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0 var(--sp-3);
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0 0 var(--sp-1);
+}
+
+.btn-primary {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--paper);
+  background: var(--pine);
+  padding: 0.7rem 1.4rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  border: 1px solid var(--pine);
+}
+.btn-primary:hover { background: var(--pine-deep); border-color: var(--pine-deep); color: var(--paper); }
+
+.text-link {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   Hero
+   Instinct: dark, centered, stacked hero banner (photo above headline
+   above paragraph above button, all centered, on a near-black bar).
+   Antithesis used here: light warm background, left-aligned text block,
+   asymmetric two-column layout with the portrait set beside — not above
+   — the copy, no shadow/gradient behind either.
+   ========================================================================== */
+.hero {
+  background: var(--canvas);
+  padding: var(--sp-6) 0 var(--sp-5);
+}
+
+.hero .wrap {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: var(--sp-4);
+}
+
+.hero-text h1 {
+  font-size: clamp(2rem, 1.6rem + 2vw, 2.85rem);
+  font-weight: 500;
+  margin-bottom: var(--sp-2);
+}
+
+.hero-lede {
+  font-size: 1.1rem;
+  color: var(--ink-soft);
+  max-width: 46ch;
+  margin-bottom: var(--sp-3);
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  flex-wrap: wrap;
+}
+
+.hero-portrait {
+  flex-shrink: 0;
+}
+
+.hero-portrait img {
+  width: 168px;
+  height: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+}
+
+/* ==========================================================================
+   Quiet in-page nav
+   Instinct: a separate full-width contrasting banner section with a big
+   centered "What You'll Find Below" heading boxed in a card.
+   Antithesis: one slim hairline-bordered strip, small mono label, no
+   background block of its own — it reads as a rule between hero and
+   content, not a destination.
+   ========================================================================== */
+.quicklinks {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: var(--sp-2) 0;
+}
+
+.quicklinks .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.quicklinks .eyebrow { margin: 0 var(--sp-3) 0 0; }
+
+.quicklinks-links {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+.quicklinks a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  margin-right: var(--sp-3);
+}
+.quicklinks a:last-child { margin-right: 0; }
+.quicklinks a:hover { color: var(--amber); border-bottom-color: var(--amber); }
+
+/* ==========================================================================
+   Sections — shared rhythm
+   ========================================================================== */
+.section { padding: var(--sp-6) 0; }
+.section-muted { background: var(--paper-soft); }
+
+.section h2 {
+  font-size: clamp(1.5rem, 1.3rem + 1vw, 1.9rem);
+  font-weight: 500;
+  margin-bottom: var(--sp-4);
+}
+
+.pub-count {
+  font-family: var(--font-mono);
+  font-size: 0.62em;
+  font-weight: 500;
+  color: var(--ink-soft);
+  vertical-align: middle;
+  margin-left: 0.1em;
+}
+
+/* ==========================================================================
+   Publications
+   Instinct: identical white shadowed cards in a grid, a coloured
+   Bootstrap "info" title, buttons for every link.
+   Antithesis: a single flat paper panel holding a running list of
+   entries (a bibliography, not a product grid), separated by hairlines;
+   status is a bracketed mono stamp rather than a badge pill; links are
+   plain text, not button chrome.
+
+   This section also runs wider than the rest of the page (own max-width
+   below) and each entry is deliberately landscape — a title/venue header
+   row followed by a description that spans the full width, rather than
+   a tall stack — so entries read wide and short, not narrow and tall.
+   ========================================================================== */
+.wrap.pub-wrap { max-width: 1180px; }
+
+.pub-panel {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.pub-entry {
+  padding: var(--sp-3) var(--sp-4);
+  border-bottom: 1px solid var(--line-soft);
+}
+.pub-entry:last-child { border-bottom: none; }
+
+.pub-entry-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-1);
+}
+
+.pub-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-top: 0.1rem;
+}
+
+.pub-venue-block {
+  flex: 0 0 240px;
+  text-align: center;
+}
+
+.pub-venue-block .pub-meta {
+  margin-bottom: 0.3rem;
+}
+
+.pub-venue-block .pub-status {
+  margin-bottom: 0;
+}
+
+.pub-status {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+}
+.status-review { color: var(--amber-deep); }
+.status-accepted { color: var(--pine-deep); }
+.status-contributor { color: var(--ink-soft); }
+
+.pub-meta {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+}
+
+.pub-desc {
+  color: var(--ink);
+  margin-bottom: var(--sp-2);
+}
+
+.pub-links {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+.pub-links a { text-decoration: none; border-bottom: 1px solid currentColor; margin-right: var(--sp-2); }
+.pub-links a:last-child { margin-right: 0; }
+.pub-links a:hover { color: var(--amber-deep); }
+
+.pub-links .placeholder {
+  color: var(--ink-soft);
+  border-bottom: 1px dashed var(--ink-soft);
+}
+.pub-links .placeholder:hover { color: var(--ink-soft); }
+
+@media (max-width: 699px) {
+  .pub-entry-head {
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+  .pub-venue-block {
+    flex: 0 0 auto;
+    text-align: left;
+  }
+}
+
+/* ==========================================================================
+   Projects
+   A grid still suits these (they are visual/live artefacts, unlike the
+   publications list) — but flat, bordered, no drop shadow, no hover-lift
+   transform. Hover is a colour change only.
+   ========================================================================== */
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-3);
+}
+
+.project-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: var(--sp-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+}
+
+.project-card h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.project-card p {
+  color: var(--ink-soft);
+  flex-grow: 1;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  margin-top: var(--sp-1);
+}
+
+.project-links a { text-decoration: none; border-bottom: 1px solid currentColor; margin-right: var(--sp-2); }
+.project-links a:last-child { margin-right: 0; }
+.project-links a:hover { color: var(--amber-deep); }
+
+/* ==========================================================================
+   Certifications
+   Instinct: same shadowed-card treatment as everything else, giving
+   secondary content equal visual weight to the publications.
+   Antithesis: a quiet compact list — smaller type, tighter spacing, no
+   panel border per item — so it reads as lighter-weight than the work
+   above it.
+   ========================================================================== */
+.cert-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.cert-entry {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-2);
+}
+
+.cert-entry img {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 6px;
+}
+
+.cert-mark {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  color: var(--pine-deep);
+  font-size: 0.95rem;
+}
+
+.cert-text h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.cert-text p {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  margin-bottom: 0.35rem;
+}
+
+.cert-text a {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+.cert-text a:hover { color: var(--amber-deep); }
+
+/* ==========================================================================
+   Footer
+   Instinct: identical bg-dark bar as the hero, so the page opens and
+   closes on the same beat with no development.
+   Antithesis: a distinct warm espresso brown (not the same dark as
+   anything above, and not black) — small, quiet, clearly a close rather
+   than a mirrored bookend.
+   ========================================================================== */
+.site-footer {
+  background: var(--espresso);
+  color: var(--paper-on-dark);
+  padding: var(--sp-4) 0 var(--sp-3);
+}
+
+.site-footer .wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-2);
+  text-align: center;
+}
+
+.site-footer nav {
+  display: flex;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+.site-footer a {
+  color: var(--paper-on-dark);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  margin-right: var(--sp-3);
+}
+.site-footer a:last-child { margin-right: 0; }
+.site-footer a:hover { color: #fff; border-bottom-color: var(--amber); }
+
+.site-footer p {
+  color: #A99A80;
+  font-size: 0.82rem;
+}
+
+/* ==========================================================================
+   Responsive — mobile-first; widen up
+   ========================================================================== */
+@media (min-width: 700px) {
+  .hero .wrap {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .hero-portrait img { width: 210px; }
+
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 980px) {
+  .hero { padding: var(--sp-7) 0 var(--sp-6); }
 }

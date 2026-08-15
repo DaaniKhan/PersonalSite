@@ -1,256 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Site</title>
 
-    <title>Personal Site</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Public+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="styles.css">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-
-    
-    <style>
-
-    .btn-outline-arxiv {
-      color: #b31b1b;
-      border-color: #b31b1b;
-    }
-
-    .btn-outline-arxiv:hover {
-      background-color: #b31b1b;
-      border-color: #b31b1b;
-      color: #fff;
-    }
-
-    </style>
-
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <section>
-      <div class="bg-dark text-secondary text-center py-3 px-2">
-        <div class="container">
-          <img src="Daanish Khan.jpg" class="img-fluid border rounded-2 shadow mb-2" alt="Daanish" width="180" loading="lazy">
-          <h1 class="fs-2 fw-bold text-white serif-font mb-2">I'm Daanish, Welcome!</h1>
-          <p class="fs-5 mb-2">I completed my Bachelors in Computer Science from LUMS, working in HCI, machine learning and full-stack web development. Building impactful systems which bridge research and real-world application.</p>
-          <p>
-            <a href="mailto:daanishuddin@gmail.com" class="btn btn-info btn-lg px-3 me-sm-2 fw-bold">Contact Me</a>
-            <!-- <a href="./resume.html" target="_blank" class="btn btn-outline-info btn-lg px-3 me-sm-2 fw-bold">Academic CV</a> -->
-            <!-- <a href="https://drive.google.com/file/d/1i2JFEq97DbUL6mjN9elRdlXMquacvuDl/view?usp=sharing" target="_blank" class="btn btn-outline-info btn-lg px-3 me-sm-2 fw-bold">Academic CV</a> -->
-            <a href="Academic_CV-DaanishKhan.pdf" target="_blank" class="btn btn-outline-info btn-lg px-3 me-sm-2 fw-bold">Academic CV</a>
-          </p>
-          
+
+  <header class="hero">
+    <div class="wrap">
+      <div class="hero-text">
+        <h1>I'm Daanish, Welcome!</h1>
+        <p class="hero-lede">I completed my Bachelors in Computer Science from LUMS, working in HCI, machine learning and full-stack web development. Building impactful systems which bridge research and real-world application.</p>
+        <div class="hero-actions">
+          <a href="mailto:daanishuddin@gmail.com" class="btn-primary">Contact Me</a>
+          <a href="DaanishKhan-Academic_CV.pdf" target="_blank" class="text-link">Academic CV</a>
         </div>
       </div>
-    </section>
-
-    <section class="bg-light py-4 border-bottom">
-      <div class="container text-center">
-        <h2 class="fw-bold serif-font mb-3 text-dark text-center">What You'll Find Below</h2>
-        <p class="fs-5 text-secondary san-serif-font mb-1">
-          <a href="#research-projects" class="text-decoration-underline fw-semibold text-primary">
-            <strong>Publications</strong>
-          </a>
-        </p>
-        <p class="fs-5 text-secondary san-serif-font mb-1">
-          <a href="#projects" class="text-decoration-underline fw-semibold text-primary">
-            <strong>Projects</strong>
-          </a>
-        </p>
-        <p class="fs-5 text-secondary san-serif-font">
-          <a href="#certifications" class="text-decoration-underline fw-semibold text-primary">
-            <strong>Certifications</strong>
-          </a>
-        </p>
+      <div class="hero-portrait">
+        <img src="Daanish Khan.jpg" alt="Daanish" width="210" loading="lazy">
       </div>
-    </section>
+    </div>
+  </header>
 
+  <nav class="quicklinks" aria-label="Page sections">
+    <div class="wrap">
+      <p class="eyebrow">What You'll Find Below</p>
+      <div class="quicklinks-links">
+        <a href="#research-projects">Publications</a>
+        <a href="#projects">Projects</a>
+        <a href="#certifications">Certifications</a>
+      </div>
+    </div>
+  </nav>
 
-    <section id="research-projects" class="bg-white py-5">
-      <div class="container px-3">
-        <h2 class="pb-3 border-bottom serif-font text-center">Publications</h2>
-        <div class="row row-cols-1 row-cols-lg-2 g-4">
+  <main>
 
-          <!-- LLM Web Search Sustainability Card -->
-          <div class="col">
-            <div class="card h-100 shadow-sm border-info border-2">
-              <div class="card-body">
-                <h5 class="card-title text-info">LLM Web Search Sustainability (The Web Conference 2026)</h5>
-                <p class="text-muted fst-italic mb-2"><small>Accepted</small></p>
-                <p class="card-text">
-                  A measurement-driven study quantifying the web-scale retrieval behaviors of LLM answer engines, revealing their reliance on existing search indices and significant infrastructural overhead from real-time fetching.
-                </p>
-                <div class="d-flex flex-wrap gap-2">
-                  <a href="https://github.com/SYSNET-LUMS/LLMs-and-Web" target="_blank" class="btn btn-outline-primary btn-sm fw-bold">GitHub</a>
-                  <!-- <a href="https://drive.google.com/file/d/1Qszllc1e_r-4fv1D7R5mePZnwRClPpao/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm fw-bold">Manuscript</a> -->
-                  <a href="https://dl.acm.org/doi/10.1145/3774904.3792278" target="_blank" class="btn btn-outline-primary btn-sm fw-bold">Paper</a>
-                </div>
+    <!-- ===================================================================
+         Publications — a single paper panel holding a running list of
+         entries, most recent activity first, matching the CV's own order.
+         =================================================================== -->
+    <section id="research-projects" class="section" aria-labelledby="publications-heading">
+      <div class="wrap pub-wrap">
+        <h2 id="publications-heading">Publications <span class="pub-count">(4)</span></h2>
+
+        <div class="pub-panel">
+
+          <!-- JURY — NEW, Under Review -->
+          <article class="pub-entry">
+            <div class="pub-entry-head">
+              <h3 class="pub-title">JURY: A Framework for Evaluating Chemical Language Models</h3>
+              <div class="pub-venue-block">
+                <p class="pub-meta">Journal of Cheminformatics</p>
+                <p class="pub-status status-review">[ Under Review ]</p>
               </div>
             </div>
-          </div>
+            <p class="pub-desc">A four-probe evaluation framework spanning training-free to fully-supervised prediction, benchmarking ten pretrained chemical language models plus an ECFP baseline across 73 ADMET datasets.</p>
+            <p class="pub-links">
+              <!-- TODO(Daanish): replace # with the paper link once available -->
+              <a href="#" class="placeholder">Paper</a>
+            </p>
+          </article>
 
-          <!-- KissanDost Card -->
-          <div class="col">
-            <div class="card h-100 shadow-sm border-info border-2">
-              <div class="card-body">
-                <h5 class="card-title text-info">KissanDost (IEEE DCOSS-IoT 2026)</h5>
-                <p class="text-muted fst-italic mb-2"><small>Accepted</small></p>
-                <p class="card-text">
-                  An IoT + LLM-based multilingual advisory system that empowers low-literate farmers to access real-time agricultural insights in plain langauge via WhatsApp.
-                </p>
-                <div class="d-flex flex-wrap gap-2">
-                  <a href="https://github.com/anonymous115935/KissanDost" target="_blank" class="btn btn-outline-primary btn-sm fw-bold">GitHub</a>
-                  <!-- <a href="https://drive.google.com/file/d/19-582ejcHHn8x_dDG1raBR4iv6mInpC9/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm fw-bold">Manuscript</a> -->
-                  <a href="https://arxiv.org/abs/2602.08593" target="_blank" class="btn btn-outline-arxiv btn-sm fw-bold">arXiv</a>
-                </div>
+          <!-- InterpretMolT — NEW, Under Review -->
+          <article class="pub-entry">
+            <div class="pub-entry-head">
+              <h3 class="pub-title">Interpreting Molecular Transformers with Sparse Autoencoders</h3>
+              <div class="pub-venue-block">
+                <p class="pub-meta">Artificial Intelligence Chemistry</p>
+                <p class="pub-status status-review">[ Under Review ]</p>
               </div>
             </div>
-          </div>
+            <p class="pub-desc">InterpretMolT pairs sparse autoencoders with counterfactual single-atom edits to causally test a molecular transformer's learned structural associations, applied across six pretrained models.</p>
+            <p class="pub-links">
+              <!-- TODO(Daanish): replace # with the paper link once available -->
+              <a href="#" class="placeholder">Paper</a>
+            </p>
+          </article>
 
-          <!-- UQA Card -->
-          <div class="col">
-            <div class="card h-100 shadow-sm border-info border-2">
-              <div class="card-body">
-                <h5 class="card-title text-info">UQA: Urdu QA Dataset (Contributor)</h5>
-                <p class="card-text">
-                  Contributor to <strong>UQA</strong>, a benchmark Urdu QA dataset based on SQuAD2.0, published in LREC-COLING 2024.
-                </p>
-                <a href="https://aclanthology.org/2024.lrec-main.1497/" target="_blank" class="btn btn-outline-primary btn-sm fw-bold">Read Publication</a>
+          <!-- LLM Web Search Sustainability — existing, Accepted -->
+          <article class="pub-entry">
+            <div class="pub-entry-head">
+              <h3 class="pub-title">LLM Web Search Sustainability</h3>
+              <div class="pub-venue-block">
+                <p class="pub-meta">The Web Conference 2026</p>
+                <p class="pub-status status-accepted">[ Accepted ]</p>
               </div>
             </div>
-          </div>
-        </div>
-    </section>
+            <p class="pub-desc">A measurement-driven study quantifying the web-scale retrieval behaviors of LLM answer engines, revealing their reliance on existing search indices and significant infrastructural overhead from real-time fetching.</p>
+            <p class="pub-links">
+              <a href="https://github.com/SYSNET-LUMS/LLMs-and-Web" target="_blank">GitHub</a>
+              <a href="https://dl.acm.org/doi/10.1145/3774904.3792278" target="_blank">Paper</a>
+            </p>
+          </article>
 
-    <section id="projects" class="bg-light py-5">
-      <div class="container px-3">
-        <h2 class="pb-3 border-bottom serif-font text-center">Projects</h2>
-        <div class="row row-cols-1 row-cols-lg-2 g-4">
-
-          <!-- Scribbly -->
-          <div class="col">
-            <div class="card h-100 shadow-sm">
-              <div class="card-body">
-                <h5 class="card-title text-info">Scribbly – Social Book Companion</h5>
-                <p class="card-text">
-                  A full-stack platform to review and manage books with personal libraries, public reviews, JWT auth, and OpenLibrary API integration in a clean, animated UI.
-                </p>
-                <div class="d-flex flex-wrap gap-2">
-                  <a href="https://github.com/DaaniKhan/Scribbly" target="_blank" class="btn btn-outline-primary btn-sm fw-bold">GitHub</a>
-                  <a href="https://scribbly-79jq.onrender.com" target="_blank" class="btn btn-primary btn-sm fw-bold">
-                    🌐 Live Site
-                  </a>
-                </div>
+          <!-- KissanDost — existing, Accepted -->
+          <article class="pub-entry">
+            <div class="pub-entry-head">
+              <h3 class="pub-title">KissanDost</h3>
+              <div class="pub-venue-block">
+                <p class="pub-meta">IEEE DCOSS-IoT 2026</p>
+                <p class="pub-status status-accepted">[ Accepted ]</p>
               </div>
             </div>
-          </div>
+            <p class="pub-desc">An IoT + LLM-based multilingual advisory system that empowers low-literate farmers to access real-time agricultural insights in plain langauge via WhatsApp.</p>
+            <p class="pub-links">
+              <a href="https://github.com/anonymous115935/KissanDost" target="_blank">GitHub</a>
+              <a href="https://arxiv.org/abs/2602.08593" target="_blank">Paper</a>
+            </p>
+          </article>
 
-          <!-- F1 Visualiser -->
-          <div class="col">
-            <div class="card h-100 shadow-sm">
-              <div class="card-body">
-                <h5 class="card-title text-info">F1 Visualiser – OpenF1 Session Explorer</h5>
-                <p class="card-text">
-                  Interactive visualizer using OpenF1 API to explore lap leaderboards, pit stops, qualifying segments, and race strategies.
-                </p>
-                <div class="d-flex flex-wrap gap-2">
-                  <a href="https://github.com/DaaniKhan/F1-Visualise" target="_blank" class="btn btn-outline-primary btn-sm fw-bold">GitHub</a>
-                  <a href="https://f1-visualise.onrender.com" target="_blank" class="btn btn-primary btn-sm fw-bold">
-                    🌐 Live Site
-                  </a>
-                </div>
+          <!-- UQA — existing, Contributor
+          <article class="pub-entry">
+            <div class="pub-entry-head">
+              <h3 class="pub-title">UQA: Urdu QA Dataset</h3>
+              <div class="pub-venue-block">
+                <p class="pub-status status-contributor">[ Contributor ]</p>
               </div>
             </div>
-          </div>
-
-          <!-- AEG-UDA -->
-          <div class="col">
-            <div class="card h-100 shadow-sm">
-              <div class="card-body">
-                <h5 class="card-title text-info">AEG-UDA – Adaptive Entropy-Guided UDA</h5>
-                <p class="card-text">
-                  Framework integrating dynamic thresholds, entropy-guided pseudo-labeling, and rejection loss for robust universal domain adaptation.
-                </p>
-                <a href="https://github.com/SaadH-077/Adaptive-Entropy-Guided-Universal-Domain-Adaptation_AEG-UDA-" target="_blank" class="btn btn-outline-primary btn-sm fw-bold">GitHub</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Federated Learning -->
-          <div class="col">
-            <div class="card h-100 shadow-sm">
-              <div class="card-body">
-                <h5 class="card-title text-info">Federated Learning Optimization – Comparison</h5>
-                <p class="card-text">
-                  Comparative analysis of six FL algorithms on non-IID MNIST splits. Highlights SCAFFOLD and FedSAM for client drift mitigation and generalization.
-                </p>
-                <a href="https://github.com/SaadH-077/Federated-Learning-Optimization" target="_blank" class="btn btn-outline-primary btn-sm fw-bold">GitHub</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Daraz Analysis -->
-          <div class="col">
-            <div class="card h-100 shadow-sm">
-              <div class="card-body">
-                <h5 class="card-title text-info">Daraz E-Commerce Analysis</h5>
-                <p class="card-text">
-                  ML + causal inference analysis on storefront attributes affecting product ratings using Random Forest & XGBoost.
-                </p>
-                <a href="https://medium.com/@25100004/daraz-unveiled-deep-diving-into-e-commerce-55a9fcba725b" target="_blank" class="btn btn-outline-primary btn-sm fw-bold">Read Article</a>
-              </div>
-            </div>
-          </div>
-        </div>
-    </section>
-
-    <section id="certifications" class="bg-white py-5">
-      <div class="container px-3">
-        <h2 class="pb-3 border-bottom serif-font text-center">Certifications</h2>
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-
-          <!-- Gen AI Cert -->
-          <div class="col">
-            <div class="card h-100 border-success shadow-sm">
-              <div class="card-body">
-                <h5 class="card-title text-success">Introducing Generative AI with AWS</h5>
-                <p class="card-text">Completed Udacity’s Generative AI course with AWS & Accenture, covering GenAI workflows and responsible AI practices.</p>
-                <a href="https://www.udacity.com/certificate/e/d6803654-4352-11f0-a539-c7d655504e1b" target="_blank" class="btn btn-outline-primary btn-sm fw-bold">View Certificate</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- AWS Educate -->
-          <div class="col">
-            <div class="card h-100 border-success shadow-sm d-flex flex-row align-items-center">
-              <img src="aws-educate-machine-learning-foundations.png" alt="AWS Educate Badge" width="80" class="p-3">
-              <div class="card-body">
-                <h5 class="card-title text-success">AWS Educate: ML Foundations</h5>
-                <p class="card-text">Demonstrated strong understanding of ML concepts and practical application of the ML pipeline.</p>
-                <a href="https://www.credly.com/badges/24942afe-0e76-4b21-84d6-7d323b9f9d2c/public_url" target="_blank" class="btn btn-outline-primary btn-sm fw-bold">View</a>
-              </div>
-            </div>
-          </div>
+            <p class="pub-desc">Contributor to <strong>UQA</strong>, a benchmark Urdu QA dataset based on SQuAD2.0, published in LREC-COLING 2024.</p>
+            <p class="pub-links">
+              <a href="https://aclanthology.org/2024.lrec-main.1497/" target="_blank">Read Publication</a>
+            </p>
+          </article> -->
 
         </div>
       </div>
     </section>
 
-    <section class="bg-dark">
-      <div class="container">
-        <footer class="py-3 my-4">
-          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item"><a href="index.html" class="nav-link px-2 text-white">Home</a></li>
-            <li class="nav-item"><a href="mailto:daanishuddin@gmail.com" class="nav-link px-2 text-white">Contact Me</a></li>
-          </ul>
-          <p class="text-center text-white">© 2024 Daanish Uddin Khan</p>
-        </footer>
+    <!-- ===================================================================
+         Projects
+         =================================================================== -->
+    <section id="projects" class="section section-muted" aria-labelledby="projects-heading">
+      <div class="wrap">
+        <h2 id="projects-heading">Projects</h2>
+
+        <div class="project-grid">
+
+          <article class="project-card">
+            <h3>Scribbly – Social Book Companion</h3>
+            <p>A full-stack platform to review and manage books with personal libraries, public reviews, JWT auth, and OpenLibrary API integration in a clean, animated UI.</p>
+            <div class="project-links">
+              <a href="https://github.com/DaaniKhan/Scribbly" target="_blank">GitHub</a>
+              <a href="https://scribbly-79jq.onrender.com" target="_blank">Live Site</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <h3>F1 Visualiser – OpenF1 Session Explorer</h3>
+            <p>Interactive visualizer using OpenF1 API to explore lap leaderboards, pit stops, qualifying segments, and race strategies.</p>
+            <div class="project-links">
+              <a href="https://github.com/DaaniKhan/F1-Visualise" target="_blank">GitHub</a>
+              <a href="https://f1-visualise.onrender.com" target="_blank">Live Site</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <h3>AEG-UDA – Adaptive Entropy-Guided UDA</h3>
+            <p>Framework integrating dynamic thresholds, entropy-guided pseudo-labeling, and rejection loss for robust universal domain adaptation.</p>
+            <div class="project-links">
+              <a href="https://github.com/SaadH-077/Adaptive-Entropy-Guided-Universal-Domain-Adaptation_AEG-UDA-" target="_blank">GitHub</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <h3>Federated Learning Optimization – Comparison</h3>
+            <p>Comparative analysis of six FL algorithms on non-IID MNIST splits. Highlights SCAFFOLD and FedSAM for client drift mitigation and generalization.</p>
+            <div class="project-links">
+              <a href="https://github.com/SaadH-077/Federated-Learning-Optimization" target="_blank">GitHub</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <h3>Daraz E-Commerce Analysis</h3>
+            <p>ML + causal inference analysis on storefront attributes affecting product ratings using Random Forest &amp; XGBoost.</p>
+            <div class="project-links">
+              <a href="https://medium.com/@25100004/daraz-unveiled-deep-diving-into-e-commerce-55a9fcba725b" target="_blank">Read Article</a>
+            </div>
+          </article>
+
+        </div>
       </div>
     </section>
-    
+
+    <!-- ===================================================================
+         Certifications
+         =================================================================== -->
+    <section id="certifications" class="section" aria-labelledby="certifications-heading">
+      <div class="wrap">
+        <h2 id="certifications-heading">Certifications</h2>
+
+        <ul class="cert-list">
+
+          <li class="cert-entry">
+            <span class="cert-mark" aria-hidden="true">✓</span>
+            <div class="cert-text">
+              <h3>Introducing Generative AI with AWS</h3>
+              <p>Completed Udacity&rsquo;s Generative AI course with AWS &amp; Accenture, covering GenAI workflows and responsible AI practices.</p>
+              <a href="https://www.udacity.com/certificate/e/d6803654-4352-11f0-a539-c7d655504e1b" target="_blank">View Certificate</a>
+            </div>
+          </li>
+
+          <li class="cert-entry">
+            <img src="aws-educate-machine-learning-foundations.png" alt="AWS Educate badge" width="48" height="48" loading="lazy">
+            <div class="cert-text">
+              <h3>AWS Educate: ML Foundations</h3>
+              <p>Demonstrated strong understanding of ML concepts and practical application of the ML pipeline.</p>
+              <a href="https://www.credly.com/badges/24942afe-0e76-4b21-84d6-7d323b9f9d2c/public_url" target="_blank">View</a>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <nav aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="mailto:daanishuddin@gmail.com">Contact Me</a>
+      </nav>
+      <p>© 2024 Daanish Uddin Khan</p>
+    </div>
+  </footer>
+
 </body>
+</html>
